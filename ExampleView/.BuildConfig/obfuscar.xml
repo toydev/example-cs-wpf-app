@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+
+<Obfuscator>
+  <Var name="InPath" value=".\" />
+  <Var name="OutPath" value=".\Out" />
+  <Var name="KeepPublicApi" value="true" />
+  <Var name="HidePrivateApi" value="true" />
+  <Var name="HideStrings" value="true" />
+
+  <Module file="$(InPath)\ExampleView.dll" />
+</Obfuscator>
