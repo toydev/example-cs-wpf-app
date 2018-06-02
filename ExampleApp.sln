@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleApp", "ExampleApp\Ex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleView", "ExampleView\ExampleView.csproj", "{EEE2C2F0-8593-4BB2-BEDA-774144320ABE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin1", "Plugin1\Plugin1.csproj", "{8D293A07-0D9A-438B-A472-AAA358A3E5D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EEE2C2F0-8593-4BB2-BEDA-774144320ABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEE2C2F0-8593-4BB2-BEDA-774144320ABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEE2C2F0-8593-4BB2-BEDA-774144320ABE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D293A07-0D9A-438B-A472-AAA358A3E5D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D293A07-0D9A-438B-A472-AAA358A3E5D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D293A07-0D9A-438B-A472-AAA358A3E5D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D293A07-0D9A-438B-A472-AAA358A3E5D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
