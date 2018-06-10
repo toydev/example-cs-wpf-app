@@ -1,5 +1,5 @@
-﻿using Prism.Mvvm;
-using Reactive.Bindings;
+﻿using Prism.Commands;
+using Prism.Mvvm;
 
 namespace ExampleApp.UI
 {
@@ -7,12 +7,16 @@ namespace ExampleApp.UI
     {
         public int Count { get; set; } = 0;
 
-        public ReactiveCommand TestCommand { get; set; }
+        public DelegateCommand CountUpCommand { get; set; }
 
         public MainWindowViewModel()
         {
-            TestCommand = new ReactiveCommand();
-            TestCommand.Subscribe(() => ++Count);
+            CountUpCommand = new DelegateCommand(CountUp);
+        }
+
+        public void CountUp()
+        {
+            ++Count;
         }
     }
 }

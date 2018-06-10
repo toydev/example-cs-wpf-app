@@ -4,7 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
+        xmlns:l="clr-namespace:Gu.Wpf.Localization;assembly=Gu.Wpf.Localization"
         xmlns:local="clr-namespace:ExampleApp.UI"
+        xmlns:r="clr-namespace:ExampleApp.Properties"
         mc:Ignorable="d"
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="MainWindow"
@@ -17,7 +19,7 @@
         <TextBlock
             Text="{Binding Count}" />
         <Button
-            Content="Count up"
-            Command="{Binding TestCommand}" />
+            Content="{l:Static r:Resources.lbl_count_up}"
+            Command="{Binding CountUpCommand}" />
     </StackPanel>
 </Window>
