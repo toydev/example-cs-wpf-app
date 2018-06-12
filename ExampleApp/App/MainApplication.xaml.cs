@@ -9,6 +9,7 @@ namespace ExampleApp.App
     {
         private void Application_Startup(object sender, StartupEventArgs e)
         {
+            var resources = typeof(Properties.Resources);
             var bootstrapper = new Bootstrapper();
             bootstrapper.Run();
         }

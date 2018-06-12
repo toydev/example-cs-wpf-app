@@ -130,6 +130,11 @@
   <ItemGroup>
     <Resource Include=".BuildConfig\obfuscar.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resource.en.resx" />
+    <EmbeddedResource Include="Properties\Resource.ja.resx" />
+    <EmbeddedResource Include="Properties\Resource.resx" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="AfterResolveReferences" Condition="'$(Configuration)' == 'Release'">
     <ItemGroup>
@@ -155,5 +160,7 @@ cp "$(TargetDir)/Out/$(TargetFileName)" "$(TargetPath)"
       <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Obfuscar.2.2.11\build\obfuscar.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Obfuscar.2.2.11\build\obfuscar.props'))" />
+    <Error Condition="!Exists('..\packages\Resource.Embedder.1.2.5\build\Resource.Embedder.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Resource.Embedder.1.2.5\build\Resource.Embedder.targets'))" />
   </Target>
+  <Import Project="..\packages\Resource.Embedder.1.2.5\build\Resource.Embedder.targets" Condition="Exists('..\packages\Resource.Embedder.1.2.5\build\Resource.Embedder.targets')" />
 </Project>

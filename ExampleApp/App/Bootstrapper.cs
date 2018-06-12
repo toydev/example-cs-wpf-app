@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Globalization;
+using System.Threading;
 using System.Windows;
 
 using Microsoft.Practices.Unity;
 using Prism.Mvvm;
 using Prism.Unity;
+using Gu.Localization;
 
 using ExampleApp.UI;
 
@@ -26,6 +29,17 @@ namespace ExampleApp.App
 
         protected override DependencyObject CreateShell()
         {
+            try
+            {
+                var culture = new CultureInfo("ja");
+                CultureInfo.CurrentCulture = culture;
+                CultureInfo.CurrentUICulture = culture;
+                Translator.Culture = culture;
+            }
+            catch (Exception)
+            {
+            }
+
             return Container.Resolve<MainWindow>();
         }
 
