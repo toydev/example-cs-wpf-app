@@ -1,7 +1,6 @@
-﻿<Application x:Class="ExampleApp.App.MainApplication"
+﻿<Application x:Class="ExampleApp.App.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:ExampleApp"
              Startup="Application_Startup">
     <Application.Resources>
          

@@ -40,11 +40,11 @@
     <StartupObject>ExampleApp.App.StartUp</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Gu.Localization, Version=6.4.0.0, Culture=neutral, PublicKeyToken=63b557f19697202e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Gu.Localization.6.4.0.0\lib\net45\Gu.Localization.dll</HintPath>
+    <Reference Include="Gu.Localization, Version=6.4.1.0, Culture=neutral, PublicKeyToken=63b557f19697202e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gu.Localization.6.4.1.0\lib\net45\Gu.Localization.dll</HintPath>
     </Reference>
-    <Reference Include="Gu.Wpf.Localization, Version=6.4.0.0, Culture=neutral, PublicKeyToken=63b557f19697202e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Gu.Wpf.Localization.6.4.0.0\lib\net45\Gu.Wpf.Localization.dll</HintPath>
+    <Reference Include="Gu.Wpf.Localization, Version=6.4.1.0, Culture=neutral, PublicKeyToken=63b557f19697202e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gu.Wpf.Localization.6.4.1.0\lib\net45\Gu.Wpf.Localization.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
@@ -92,13 +92,13 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App\MainApplication.xaml">
+    <ApplicationDefinition Include="App\App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="App\Bootstrapper.cs" />
-    <Compile Include="App\MainApplication.xaml.cs">
-      <DependentUpon>MainApplication.xaml</DependentUpon>
+    <Compile Include="App\App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="App\StartUp.cs" />
@@ -131,9 +131,10 @@
     <Resource Include=".BuildConfig\obfuscar.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Resource.en.resx" />
-    <EmbeddedResource Include="Properties\Resource.ja.resx" />
-    <EmbeddedResource Include="Properties\Resource.resx" />
+    <EmbeddedResource Include="Properties\Dummy.en.resx" />
+    <EmbeddedResource Include="Properties\Dummy.ja-JP.resx" />
+    <EmbeddedResource Include="Properties\Dummy.ja.resx" />
+    <EmbeddedResource Include="Properties\Dummy.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="AfterResolveReferences" Condition="'$(Configuration)' == 'Release'">

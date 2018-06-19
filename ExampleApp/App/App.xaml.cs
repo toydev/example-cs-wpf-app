@@ -3,9 +3,9 @@
 namespace ExampleApp.App
 {
     /// <summary>
-    /// MainApplication.xaml の相互作用ロジック
+    /// App.xaml の相互作用ロジック
     /// </summary>
-    public partial class MainApplication : Application
+    public partial class App : Application
     {
         private void Application_Startup(object sender, StartupEventArgs e)
         {
