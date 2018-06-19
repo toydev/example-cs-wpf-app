@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using System.Globalization;
+using System.Windows;
+
+using Gu.Localization;
 
 namespace ExampleApp.UI
 {
@@ -10,6 +13,11 @@ namespace ExampleApp.UI
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            // Translator.CurrentCulture = (CultureInfo)languageComboBox.SelectedItem;
         }
     }
 }

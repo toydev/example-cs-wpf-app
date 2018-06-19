@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
         xmlns:l="clr-namespace:Gu.Wpf.Localization;assembly=Gu.Wpf.Localization"
+        xmlns:localization="clr-namespace:Gu.Localization;assembly=Gu.Localization"
         xmlns:local="clr-namespace:ExampleApp.UI"
         xmlns:r="clr-namespace:ExampleApp.Properties"
         mc:Ignorable="d"
@@ -18,6 +19,9 @@
             prism:RegionManager.RegionName="MainContent" />
         <TextBlock
             Text="{Binding Count}" />
+        <ComboBox x:Name="LanguageComboBox"
+            ItemsSource="{Binding Path=(localization:Translator.Cultures)}"
+            SelectedItem="{Binding Path=(localization:Translator.Culture), Converter={x:Static l:CultureOrDefaultConverter.Default}}" />
         <Button
             Content="{l:Static r:Resources.lbl_count_up}"
             Command="{Binding CountUpCommand}" />
