@@ -31,10 +31,11 @@ namespace ExampleApp.App
         {
             try
             {
-                var culture = new CultureInfo("ja");
-                CultureInfo.CurrentCulture = culture;
-                CultureInfo.CurrentUICulture = culture;
-                Translator.Culture = culture;
+                Translator.Cultures.Clear();
+                Translator.Cultures.Add(CultureInfo.GetCultureInfo("ja"));
+                Translator.Cultures.Add(CultureInfo.GetCultureInfo("ja-JP"));
+                Translator.Cultures.Add(CultureInfo.GetCultureInfo("en"));
+                Translator.Cultures.Add(CultureInfo.GetCultureInfo("sw"));
             }
             catch (Exception)
             {

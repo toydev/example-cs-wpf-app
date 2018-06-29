@@ -130,12 +130,6 @@
   <ItemGroup>
     <Resource Include=".BuildConfig\obfuscar.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Properties\Dummy.en.resx" />
-    <EmbeddedResource Include="Properties\Dummy.ja-JP.resx" />
-    <EmbeddedResource Include="Properties\Dummy.ja.resx" />
-    <EmbeddedResource Include="Properties\Dummy.resx" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="AfterResolveReferences" Condition="'$(Configuration)' == 'Release'">
     <ItemGroup>
